@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>JemblemNyamNyamDita | Jajanan Tradisional</title>
+<title>JemblemNyamNyamAnditaKirana</title>
 
 <style>
 *{
@@ -19,103 +19,96 @@ html{
 }
 
 body{
-    background:#fffaf5;
-    color:#3b2417;
+    background:#f8f1e8;
+    color:#3b2418;
 }
 
-/* ================= NAVBAR ================= */
-
-nav{
+/* NAVBAR */
+.navbar{
     position:sticky;
     top:0;
     z-index:1000;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:16px 7%;
-    background:rgba(59,36,23,.97);
-    box-shadow:0 4px 20px rgba(0,0,0,.15);
+    padding:18px 7%;
+    background:#fffaf4;
+    border-bottom:1px solid #ead8c4;
 }
 
 .logo{
-    color:white;
-    font-size:24px;
-    font-weight:800;
+    font-size:25px;
+    font-weight:900;
+    color:#4a2b1c;
 }
 
 .logo span{
-    color:#d99a5b;
+    color:#a8663c;
 }
 
-.nav-right{
+.navbar nav{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:25px;
 }
 
-.nav-right a{
-    color:white;
+.navbar nav a{
     text-decoration:none;
+    color:#5b4030;
+    font-weight:bold;
 }
 
 .cart-button{
     border:none;
-    background:#b86b32;
+    background:#6f4328;
     color:white;
     padding:11px 17px;
-    border-radius:25px;
+    border-radius:9px;
     cursor:pointer;
     font-weight:bold;
 }
 
 .cart-button:hover{
-    background:#d18443;
+    background:#4d2d1c;
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero{
-    min-height:570px;
-    padding:90px 7%;
-    display:flex;
+    min-height:620px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
     align-items:center;
-    justify-content:space-between;
-    gap:40px;
-    color:white;
-
+    gap:50px;
+    padding:70px 7%;
     background:
-    radial-gradient(circle at 85% 20%,#d99a5b,transparent 25%),
-    linear-gradient(135deg,#3b2417,#6f4024,#a65f2d);
+    radial-gradient(circle at top right,#d7a57b 0,transparent 30%),
+    #ead5bd;
 }
 
-.hero-text{
-    max-width:650px;
-}
-
-.badge{
-    display:inline-block;
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.3);
-    padding:9px 16px;
-    border-radius:30px;
-    margin-bottom:20px;
-    font-size:14px;
+.hero-small{
+    color:#a05b32;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
 }
 
 .hero h1{
-    font-size:clamp(45px,7vw,78px);
+    font-family:Georgia,serif;
+    font-size:clamp(45px,6vw,75px);
     line-height:1;
-    margin-bottom:20px;
+    color:#402619;
 }
 
 .hero h1 span{
-    color:#ffd39e;
+    color:#a45e32;
 }
 
 .hero p{
-    font-size:18px;
-    line-height:1.7;
-    color:#f8e9dc;
+    margin-top:22px;
+    max-width:560px;
+    line-height:1.8;
+    color:#684b39;
+    font-size:17px;
 }
 
 .hero-buttons{
@@ -125,41 +118,41 @@ nav{
     flex-wrap:wrap;
 }
 
-.hero-btn{
+.btn-primary{
     display:inline-block;
-    padding:14px 24px;
-    background:#fff;
-    color:#6f4024;
     text-decoration:none;
-    border-radius:30px;
+    background:#6f4328;
+    color:white;
+    padding:14px 24px;
+    border-radius:8px;
     font-weight:bold;
 }
 
-.hero-btn.secondary{
-    background:transparent;
-    color:white;
-    border:1px solid white;
+.btn-secondary{
+    display:inline-block;
+    text-decoration:none;
+    border:2px solid #6f4328;
+    color:#6f4328;
+    padding:12px 23px;
+    border-radius:8px;
+    font-weight:bold;
 }
 
-.jemblem-emoji{
-    font-size:170px;
-    animation:float 3s ease-in-out infinite;
+.hero-image{
+    position:relative;
 }
 
-@keyframes float{
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-18px);
-    }
+.hero-image img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:18px 18px 0 #9b633e;
 }
 
-/* ================= SECTION ================= */
-
-section{
-    padding:75px 7%;
+/* SECTION */
+.section{
+    padding:80px 7%;
 }
 
 .section-title{
@@ -167,189 +160,196 @@ section{
     margin-bottom:40px;
 }
 
+.section-title small{
+    color:#a45e32;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
 .section-title h2{
-    font-size:36px;
-    color:#5a321d;
+    margin-top:8px;
+    font-family:Georgia,serif;
+    font-size:42px;
+    color:#43281b;
 }
 
-.section-title p{
-    margin-top:10px;
-    color:#806b5d;
-}
-
-/* ================= SEARCH ================= */
-
-.search-box{
-    max-width:600px;
-    margin:0 auto 40px;
-}
-
-.search-box input{
-    width:100%;
-    padding:16px 20px;
-    border:2px solid #ead5c1;
-    border-radius:30px;
-    outline:none;
-    font-size:16px;
-    background:white;
-}
-
-.search-box input:focus{
-    border-color:#b86b32;
-}
-
-/* ================= PRODUCTS ================= */
-
-.products{
+/* MENU */
+.menu{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
-.card{
+.product{
     background:white;
-    border-radius:22px;
+    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(90,50,29,.10);
+    border:1px solid #ead8c4;
     transition:.3s;
-    border:1px solid #f0e0d2;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 40px rgba(90,50,29,.18);
+.product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(75,42,24,.14);
 }
 
-.card-image{
+.product-image{
+    height:250px;
     position:relative;
+    overflow:hidden;
 }
 
-.card-image img{
+.product-image img{
     width:100%;
-    height:220px;
+    height:100%;
     object-fit:cover;
-    display:block;
+    transition:.4s;
 }
 
-.label{
+.product:hover img{
+    transform:scale(1.05);
+}
+
+.badge{
     position:absolute;
-    top:14px;
     left:14px;
-    background:#8f4f26;
-    color:white;
+    top:14px;
+    background:#fff8ee;
+    color:#714323;
     padding:7px 12px;
     border-radius:20px;
     font-size:12px;
     font-weight:bold;
 }
 
-.card-content{
-    padding:20px;
+.product-content{
+    padding:22px;
 }
 
-.card-content h3{
-    color:#5a321d;
-    margin-bottom:8px;
-    font-size:21px;
+.product-content h3{
+    font-family:Georgia,serif;
+    font-size:23px;
+    color:#43281b;
 }
 
-.card-content p{
-    color:#806b5d;
-    font-size:14px;
+.product-content p{
+    color:#806858;
+    margin-top:9px;
     line-height:1.6;
+    font-size:14px;
 }
 
 .price{
-    margin:15px 0;
-    color:#a85825;
+    margin:17px 0;
+    color:#a2572c;
     font-size:21px;
     font-weight:bold;
 }
 
-.buy-btn{
+.add-button{
     width:100%;
     padding:13px;
     border:none;
-    border-radius:12px;
-    background:linear-gradient(135deg,#8f4f26,#c0783b);
+    border-radius:8px;
+    background:#6f4328;
     color:white;
-    font-weight:bold;
     cursor:pointer;
+    font-weight:bold;
 }
 
-.buy-btn:hover{
-    background:linear-gradient(135deg,#713d1f,#a85f2d);
+.add-button:hover{
+    background:#4d2d1c;
 }
 
-/* ================= PROMO ================= */
-
+/* PROMO */
 .promo{
-    background:
-    linear-gradient(135deg,#5a321d,#9a582d);
-    color:white;
-    border-radius:25px;
-    padding:40px;
-    text-align:center;
     margin:0 7% 70px;
+    padding:35px 40px;
+    border-radius:15px;
+    background:#4a2b1c;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .promo h2{
-    font-size:34px;
-    margin-bottom:10px;
+    font-family:Georgia,serif;
+    font-size:30px;
 }
 
 .promo p{
-    color:#f6e5d5;
+    margin-top:8px;
+    color:#dfc8b3;
 }
 
-/* ================= ABOUT ================= */
+.promo-price{
+    font-size:35px;
+    font-weight:bold;
+    color:#f0c18f;
+}
 
+/* ABOUT */
 .about{
-    background:#f4e5d7;
+    background:#ead5bd;
 }
 
-.info-grid{
+.about-grid{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.info-box{
-    background:white;
-    padding:28px;
-    border-radius:20px;
+.about-box{
+    background:#fffaf4;
+    padding:30px;
+    border-radius:13px;
+    border:1px solid #dfc7ad;
+}
+
+.about-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.about-box h3{
+    margin-bottom:10px;
+    color:#4a2b1c;
+}
+
+.about-box p{
+    color:#755b48;
+    line-height:1.7;
+}
+
+/* FOOTER */
+footer{
+    background:#2e1c13;
+    color:white;
     text-align:center;
+    padding:40px 7%;
 }
 
-.info-icon{
-    font-size:42px;
-    margin-bottom:12px;
+footer h2{
+    font-family:Georgia,serif;
 }
 
-.info-box h3{
-    color:#5a321d;
-    margin-bottom:8px;
+footer p{
+    margin-top:8px;
+    color:#cdb9a8;
 }
 
-.info-box p{
-    color:#806b5d;
-    line-height:1.6;
-}
-
-/* ================= CART ================= */
-
+/* CART */
 .cart{
     position:fixed;
     top:0;
-    right:-430px;
-    width:min(420px,94%);
+    right:-450px;
+    width:min(430px,95%);
     height:100vh;
     background:white;
     z-index:2000;
     padding:25px;
-    box-shadow:-10px 0 40px rgba(0,0,0,.25);
+    box-shadow:-10px 0 30px #0003;
     transition:.35s;
     overflow-y:auto;
 }
@@ -362,77 +362,70 @@ section{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding-bottom:20px;
-    border-bottom:1px solid #eadfd7;
+    padding-bottom:18px;
+    border-bottom:1px solid #ead8c4;
 }
 
 .cart-header h2{
-    color:#5a321d;
+    font-family:Georgia,serif;
 }
 
-.close-btn{
+.close-cart{
     border:none;
     width:35px;
     height:35px;
     border-radius:50%;
-    background:#f4e5d7;
-    color:#6f4024;
+    background:#f1e2d3;
     cursor:pointer;
     font-size:18px;
 }
 
 .cart-item{
     padding:18px 0;
-    border-bottom:1px solid #eadfd7;
+    border-bottom:1px solid #eee;
 }
 
 .cart-item h4{
-    color:#5a321d;
-    margin-bottom:6px;
+    color:#4a2b1c;
+    margin-bottom:5px;
 }
 
 .cart-item p{
-    color:#a85825;
-    font-weight:bold;
+    color:#a2572c;
 }
 
 .quantity{
     display:flex;
     align-items:center;
     gap:10px;
-    margin-top:12px;
+    margin-top:10px;
 }
 
 .quantity button{
     width:30px;
     height:30px;
     border:none;
-    border-radius:8px;
-    background:#f4e5d7;
-    color:#6f4024;
-    font-weight:bold;
+    border-radius:5px;
+    background:#ead5bd;
     cursor:pointer;
+    font-weight:bold;
 }
 
-.delete{
+.quantity .delete{
     margin-left:auto;
-    background:#fee2e2 !important;
-    color:#b91c1c !important;
+    background:#f2d5d5;
+    color:#a52e2e;
 }
 
-.cart-total{
+.total{
     margin-top:25px;
     padding:20px;
-    border-radius:16px;
-    background:#fff6ee;
+    background:#f8eee3;
+    border-radius:10px;
 }
 
-.cart-total p{
-    color:#806b5d;
-}
-
-.cart-total h2{
-    color:#8f4f26;
+.total h2{
+    color:#a2572c;
     margin-top:5px;
 }
 
@@ -441,8 +434,8 @@ section{
     margin-top:15px;
     padding:15px;
     border:none;
-    border-radius:12px;
-    background:#16a34a;
+    border-radius:8px;
+    background:#16803c;
     color:white;
     font-size:16px;
     font-weight:bold;
@@ -450,58 +443,68 @@ section{
 }
 
 .checkout:hover{
-    background:#15803d;
+    background:#11662f;
 }
 
-/* ================= FOOTER ================= */
+/* RESPONSIVE */
+@media(max-width:850px){
 
-footer{
-    background:#3b2417;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-footer h3{
-    font-size:23px;
-}
-
-footer p{
-    color:#d8bba3;
-    margin-top:8px;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:700px){
-
-    nav{
-        padding:15px 5%;
-    }
-
-    .nav-right a{
+    .navbar nav a{
         display:none;
     }
 
     .hero{
+        grid-template-columns:1fr;
         text-align:center;
-        padding:70px 5%;
     }
 
-    .jemblem-emoji{
-        display:none;
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .hero-buttons{
         justify-content:center;
     }
 
-    section{
-        padding:55px 5%;
+    .menu{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
     }
 
     .promo{
-        margin:0 5% 55px;
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+    }
+}
+
+@media(max-width:550px){
+
+    .navbar{
+        padding:15px 5%;
+    }
+
+    .hero,
+    .section{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .hero-image img{
+        height:300px;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+    }
+
+    .promo{
+        margin-left:5%;
+        margin-right:5%;
     }
 }
 </style>
@@ -509,72 +512,56 @@ footer p{
 
 <body>
 
-
-<!-- ================= NAVBAR ================= -->
-
-<nav>
+<!-- NAVBAR -->
+<header class="navbar">
 
     <div class="logo">
-        Jemblem<span>NyamNyam</span> 🍠
+        Jemblem<span>NyamNyam</span>
     </div>
 
-    <div class="nav-right">
-
+    <nav>
         <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">Tentang</a>
 
-        <a href="#produk">Produk</a>
-
-        <a href="#tentang">Tentang</a>
-
-        <button
-        class="cart-button"
-        onclick="openCart()">
-
+        <button class="cart-button" onclick="openCart()">
             🛒 Keranjang
             (<span id="cartCount">0</span>)
-
         </button>
+    </nav>
 
-    </div>
-
-</nav>
+</header>
 
 
-<!-- ================= HERO ================= -->
-
+<!-- HERO -->
 <section class="hero" id="home">
 
-    <div class="hero-text">
+    <div>
 
-        <div class="badge">
-            🍠 Jajanan Tradisional • Rasa Kekinian
+        <div class="hero-small">
+            JAJANAN SINGKONG
         </div>
 
         <h1>
-            Jemblem
+            Jemblem<br>
             <span>NyamNyam</span>
         </h1>
 
         <p>
-            Jemblem tradisional dengan rasa yang
-            lebih seru. Nikmati perpaduan singkong
-            yang gurih dengan berbagai pilihan isian
-            favorit.
+            Jemblem hangat dengan kulit renyah
+            dan isian lezat. Pilih favoritmu:
+            gula merah, cokelat, atau keju.
+            Cocok untuk teman santai bersama
+            keluarga dan teman.
         </p>
 
         <div class="hero-buttons">
 
-            <a
-            href="#produk"
-            class="hero-btn">
-
-                Lihat Menu →
+            <a href="#menu" class="btn-primary">
+                Lihat Menu
             </a>
 
-            <a
-            href="#tentang"
-            class="hero-btn secondary">
-
+            <a href="#about" class="btn-secondary">
                 Tentang Kami
             </a>
 
@@ -582,79 +569,67 @@ footer p{
 
     </div>
 
-    <div class="jemblem-emoji">
-        🍠
+
+    <div class="hero-image">
+
+        <img
+        src="https://cdn.yummy.co.id/content-images/images/20230131/XKeJc5g3eYgPnIpSqnbzdV7pvhAIQWxr-31363735313430303433d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image%2Fresize%2Cw_800%2Ch_800%2Cm_fixed%2Cx-oss-process%3Dimage%2Fformat%2Cwebp"
+        alt="Jemblem Gula Merah">
+
     </div>
 
 </section>
 
 
-<!-- ================= PRODUK ================= -->
-
-<section id="produk">
+<!-- MENU -->
+<section class="section" id="menu">
 
     <div class="section-title">
 
-        <h2>Menu Jemblem</h2>
+        <small>MENU JEMBLEM</small>
 
-        <p>
-            Pilih varian favoritmu dan masukkan
-            ke keranjang.
-        </p>
+        <h2>Pilih Rasa Favoritmu</h2>
 
     </div>
 
 
-    <div class="search-box">
-
-        <input
-        type="text"
-        id="search"
-        placeholder="🔎 Cari varian jemblem..."
-        onkeyup="searchProduct()">
-
-    </div>
+    <div class="menu">
 
 
-    <div class="products" id="productList">
+        <!-- GULA MERAH -->
+        <div class="product">
 
-
-        <!-- ORIGINAL -->
-
-        <div
-        class="card"
-        data-name="Jemblem Original">
-
-            <div class="card-image">
+            <div class="product-image">
 
                 <img
-                src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=900&q=80"
-                alt="Jemblem Original">
+                src="https://cdn.yummy.co.id/content-images/images/20230131/XKeJc5g3eYgPnIpSqnbzdV7pvhAIQWxr-31363735313430303433d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image%2Fresize%2Cw_800%2Ch_800%2Cm_fixed%2Cx-oss-process%3Dimage%2Fformat%2Cwebp"
+                alt="Jemblem Gula Merah">
 
-                <span class="label">
+                <span class="badge">
                     BEST SELLER
                 </span>
 
             </div>
 
-            <div class="card-content">
+            <div class="product-content">
 
-                <h3>🍠 Original Gula Merah</h3>
+                <h3>Jemblem Gula Merah</h3>
 
                 <p>
                     Jemblem klasik dengan isian
-                    gula merah yang manis dan legit.
+                    gula merah yang manis dan
+                    legit.
                 </p>
 
                 <div class="price">
-                    Rp10.000
+                    Rp15.000/porsi
                 </div>
 
                 <button
-                class="buy-btn"
-                onclick="addCart('Jemblem Original Gula Merah',10000)">
+                class="add-button"
+                onclick="addToCart('Jemblem Gula Merah',10000)">
 
-                    🛒 Tambah ke Keranjang
+                    + Tambah ke Keranjang
 
                 </button>
 
@@ -664,41 +639,39 @@ footer p{
 
 
         <!-- COKELAT -->
+        <div class="product">
 
-        <div
-        class="card"
-        data-name="Jemblem Cokelat">
-
-            <div class="card-image">
+            <div class="product-image">
 
                 <img
-                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+                src="https://cdn.yummy.co.id/content-images/images/20251003/9WvjOCmU5m3IS904UDA7r8bSJgaryOoK-31373539343931343039d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image%2Fresize%2Cw_800%2Ch_800%2Cm_fixed%2Cx-oss-process%3Dimage%2Fformat%2Cwebp"
                 alt="Jemblem Cokelat">
 
-                <span class="label">
+                <span class="badge">
                     FAVORIT
                 </span>
 
             </div>
 
-            <div class="card-content">
+            <div class="product-content">
 
-                <h3>🍫 Jemblem Cokelat</h3>
+                <h3>Jemblem Cokelat</h3>
 
                 <p>
-                    Isian cokelat manis yang cocok
-                    untuk pecinta rasa cokelat.
+                    Jemblem renyah dengan
+                    isian cokelat yang manis
+                    dan lumer.
                 </p>
 
                 <div class="price">
-                    Rp12.000
+                    Rp13.000/porsi
                 </div>
 
                 <button
-                class="buy-btn"
-                onclick="addCart('Jemblem Cokelat',12000)">
+                class="add-button"
+                onclick="addToCart('Jemblem Cokelat',12000)">
 
-                    🛒 Tambah ke Keranjang
+                    + Tambah ke Keranjang
 
                 </button>
 
@@ -708,169 +681,39 @@ footer p{
 
 
         <!-- KEJU -->
+        <div class="product">
 
-        <div
-        class="card"
-        data-name="Jemblem Keju">
-
-            <div class="card-image">
+            <div class="product-image">
 
                 <img
-                src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&w=900&q=80"
+                src="https://image.idntimes.com/post/20201005/fromandroid-7ed37bef1c5a91351835b481ba6df7bd.jpg"
                 alt="Jemblem Keju">
 
-                <span class="label">
+                <span class="badge">
                     NEW
                 </span>
 
             </div>
 
-            <div class="card-content">
+            <div class="product-content">
 
-                <h3>🧀 Jemblem Keju</h3>
+                <h3>Jemblem Keju</h3>
 
                 <p>
-                    Perpaduan singkong gurih
-                    dengan isian keju.
+                    Perpaduan singkong renyah
+                    dengan isian keju yang gurih
+                    dan creamy.
                 </p>
 
                 <div class="price">
-                    Rp13.000
+                    Rp10.000/porsi
                 </div>
 
                 <button
-                class="buy-btn"
-                onclick="addCart('Jemblem Keju',13000)">
+                class="add-button"
+                onclick="addToCart('Jemblem Keju',13000)">
 
-                    🛒 Tambah ke Keranjang
-
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- MOZZARELLA -->
-
-        <div
-        class="card"
-        data-name="Jemblem Mozzarella">
-
-            <div class="card-image">
-
-                <img
-                src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80"
-                alt="Jemblem Mozzarella">
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>🧀 Jemblem Mozzarella</h3>
-
-                <p>
-                    Varian kekinian dengan
-                    isian mozzarella.
-                </p>
-
-                <div class="price">
-                    Rp15.000
-                </div>
-
-                <button
-                class="buy-btn"
-                onclick="addCart('Jemblem Mozzarella',15000)">
-
-                    🛒 Tambah ke Keranjang
-
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- AYAM PEDAS -->
-
-        <div
-        class="card"
-        data-name="Jemblem Ayam Pedas">
-
-            <div class="card-image">
-
-                <img
-                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"
-                alt="Jemblem Ayam Pedas">
-
-                <span class="label">
-                    PEDAS
-                </span>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>🌶️ Jemblem Ayam Pedas</h3>
-
-                <p>
-                    Isian ayam berbumbu pedas
-                    untuk pencinta rasa gurih.
-                </p>
-
-                <div class="price">
-                    Rp15.000
-                </div>
-
-                <button
-                class="buy-btn"
-                onclick="addCart('Jemblem Ayam Pedas',15000)">
-
-                    🛒 Tambah ke Keranjang
-
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- MATCHA -->
-
-        <div
-        class="card"
-        data-name="Jemblem Matcha">
-
-            <div class="card-image">
-
-                <img
-                src="https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&w=900&q=80"
-                alt="Jemblem Matcha">
-
-                <span class="label">
-                    KEKINIAN
-                </span>
-
-            </div>
-
-            <div class="card-content">
-
-                <h3>🍵 Jemblem Matcha</h3>
-
-                <p>
-                    Varian manis dengan
-                    isian matcha yang unik.
-                </p>
-
-                <div class="price">
-                    Rp14.000
-                </div>
-
-                <button
-                class="buy-btn"
-                onclick="addCart('Jemblem Matcha',14000)">
-
-                    🛒 Tambah ke Keranjang
+                    + Tambah ke Keranjang
 
                 </button>
 
@@ -883,108 +726,105 @@ footer p{
 </section>
 
 
-<!-- ================= PROMO ================= -->
-
+<!-- PROMO -->
 <div class="promo">
 
-    <h2>🔥 PROMO JEMBLEM</h2>
+    <div>
 
-    <p>
-        Beli 5 jemblem, dapatkan harga spesial!
-        Cocok untuk teman santai atau kumpul bersama.
-    </p>
-
-</div>
-
-
-<!-- ================= TENTANG ================= -->
-
-<section
-class="about"
-id="tentang">
-
-    <div class="section-title">
-
-        <h2>Tentang JemblemNyamNyam</h2>
+        <h2>
+            Paket NyamNyam
+        </h2>
 
         <p>
-            Tradisional, sederhana, dan dibuat
-            dengan sentuhan kekinian.
+            Campur rasa favoritmu dalam satu pesanan!
         </p>
 
     </div>
 
+    <div class="promo-price">
+        3 Rasa
+    </div>
 
-    <div class="info-grid">
+</div>
 
 
-        <div class="info-box">
+<!-- ABOUT -->
+<section class="section about" id="about">
 
-            <div class="info-icon">
+    <div class="section-title">
+
+        <small>JEMBLEMNYAMNYAM</small>
+
+        <h2>Kenapa Pilih Kami?</h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-box">
+
+            <div class="about-icon">
                 🍠
             </div>
 
-            <h3>Bahan Tradisional</h3>
+            <h3>Bahan Singkong</h3>
 
             <p>
-                Jemblem dikenal sebagai jajanan
-                berbahan dasar singkong dengan
-                isian manis seperti gula merah.
+                Jemblem dibuat dari olahan
+                singkong dengan berbagai
+                pilihan isian.
             </p>
 
         </div>
 
 
-        <div class="info-box">
+        <div class="about-box">
 
-            <div class="info-icon">
+            <div class="about-icon">
                 🤎
             </div>
 
-            <h3>Rasa Beragam</h3>
+            <h3>3 Pilihan Rasa</h3>
 
             <p>
-                Tersedia berbagai pilihan rasa
-                dari original sampai varian
-                kekinian.
+                Tersedia rasa gula merah,
+                cokelat, dan keju untuk
+                menemani waktu ngemil.
             </p>
 
         </div>
 
 
-        <div class="info-box">
+        <div class="about-box">
 
-            <div class="info-icon">
+            <div class="about-icon">
                 📱
             </div>
 
             <h3>Checkout Mudah</h3>
 
             <p>
-                Pilih produk, masukkan ke keranjang,
-                kemudian checkout langsung melalui
-                WhatsApp.
+                Pilih menu, masukkan ke
+                keranjang, lalu kirim pesanan
+                langsung melalui WhatsApp.
             </p>
 
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer>
 
-    <h3>
-        🍠 JemblemNyamNyam
-    </h3>
+    <h2>JemblemNyamNyam</h2>
 
     <p>
         Jajanan tradisional dengan rasa
-        kekinian.
+        yang bikin nyam-nyam.
     </p>
 
     <p>
@@ -994,20 +834,15 @@ id="tentang">
 </footer>
 
 
-<!-- ================= CART ================= -->
-
-<div
-class="cart"
-id="cart">
+<!-- CART -->
+<div class="cart" id="cart">
 
     <div class="cart-header">
 
-        <h2>
-            🛒 Keranjang
-        </h2>
+        <h2>🛒 Keranjang</h2>
 
         <button
-        class="close-btn"
+        class="close-cart"
         onclick="closeCart()">
 
             ✕
@@ -1026,11 +861,9 @@ id="cart">
     </div>
 
 
-    <div class="cart-total">
+    <div class="total">
 
-        <p>
-            Total Pesanan
-        </p>
+        <p>Total Pesanan</p>
 
         <h2 id="total">
             Rp0
@@ -1052,24 +885,15 @@ id="cart">
 
 <script>
 
-/* ================================
-   KERANJANG
-================================ */
-
 let cart = [];
 
 
-/* ================================
-   TAMBAH PRODUK
-================================ */
+/* TAMBAH PRODUK */
+function addToCart(name, price){
 
-function addCart(name, price){
-
-    const existing =
-        cart.find(
-            item => item.name === name
-        );
-
+    let existing = cart.find(
+        item => item.name === name
+    );
 
     if(existing){
 
@@ -1085,32 +909,24 @@ function addCart(name, price){
 
     }
 
-
     updateCart();
-
     openCart();
-
 }
 
 
-/* ================================
-   UPDATE CART
-================================ */
-
+/* UPDATE CART */
 function updateCart(){
 
-    const container =
+    const cartItems =
         document.getElementById("cartItems");
 
     const totalElement =
         document.getElementById("total");
 
-    const countElement =
+    const cartCount =
         document.getElementById("cartCount");
 
-
-    container.innerHTML = "";
-
+    cartItems.innerHTML = "";
 
     let total = 0;
     let count = 0;
@@ -1118,7 +934,7 @@ function updateCart(){
 
     if(cart.length === 0){
 
-        container.innerHTML = `
+        cartItems.innerHTML = `
             <p style="margin-top:20px;">
                 Keranjang masih kosong.
             </p>
@@ -1129,52 +945,48 @@ function updateCart(){
 
     cart.forEach((item,index)=>{
 
-        const subtotal =
+        let subtotal =
             item.price * item.qty;
 
-
         total += subtotal;
-
         count += item.qty;
 
 
-        container.innerHTML += `
+        cartItems.innerHTML += `
 
-            <div class="cart-item">
+        <div class="cart-item">
 
-                <h4>
-                    ${item.name}
-                </h4>
+            <h4>${item.name}</h4>
 
-                <p>
-                    Rp${formatRupiah(item.price)}
-                </p>
+            <p>
+                Rp${formatRupiah(item.price)}
+            </p>
 
-                <div class="quantity">
+            <div class="quantity">
 
-                    <button
-                    onclick="decrease(${index})">
-                        −
-                    </button>
+                <button
+                onclick="decrease(${index})">
+                    −
+                </button>
 
-                    <b>
-                        ${item.qty}
-                    </b>
+                <b>
+                    ${item.qty}
+                </b>
 
-                    <button
-                    onclick="increase(${index})">
-                        +
-                    </button>
+                <button
+                onclick="increase(${index})">
+                    +
+                </button>
 
-                    <button
-                    class="delete"
-                    onclick="removeItem(${index})">
-                        🗑
-                    </button>
-
-                </div>
+                <button
+                class="delete"
+                onclick="removeItem(${index})">
+                    🗑
+                </button>
 
             </div>
+
+        </div>
 
         `;
 
@@ -1184,30 +996,21 @@ function updateCart(){
     totalElement.innerText =
         "Rp" + formatRupiah(total);
 
-
-    countElement.innerText =
+    cartCount.innerText =
         count;
-
 }
 
 
-/* ================================
-   TAMBAH JUMLAH
-================================ */
-
+/* TAMBAH JUMLAH */
 function increase(index){
 
     cart[index].qty++;
 
     updateCart();
-
 }
 
 
-/* ================================
-   KURANGI JUMLAH
-================================ */
-
+/* KURANG JUMLAH */
 function decrease(index){
 
     if(cart[index].qty > 1){
@@ -1221,27 +1024,19 @@ function decrease(index){
     }
 
     updateCart();
-
 }
 
 
-/* ================================
-   HAPUS PRODUK
-================================ */
-
+/* HAPUS */
 function removeItem(index){
 
     cart.splice(index,1);
 
     updateCart();
-
 }
 
 
-/* ================================
-   FORMAT RUPIAH
-================================ */
-
+/* FORMAT RUPIAH */
 function formatRupiah(number){
 
     return number.toLocaleString("id-ID");
@@ -1249,10 +1044,7 @@ function formatRupiah(number){
 }
 
 
-/* ================================
-   OPEN CART
-================================ */
-
+/* BUKA CART */
 function openCart(){
 
     document
@@ -1263,10 +1055,7 @@ function openCart(){
 }
 
 
-/* ================================
-   CLOSE CART
-================================ */
-
+/* TUTUP CART */
 function closeCart(){
 
     document
@@ -1277,82 +1066,31 @@ function closeCart(){
 }
 
 
-/* ================================
-   SEARCH PRODUK
-================================ */
-
-function searchProduct(){
-
-    const keyword =
-        document
-        .getElementById("search")
-        .value
-        .toLowerCase();
-
-
-    const cards =
-        document.querySelectorAll(".card");
-
-
-    cards.forEach(card=>{
-
-        const name =
-            card
-            .dataset
-            .name
-            .toLowerCase();
-
-
-        if(name.includes(keyword)){
-
-            card.style.display =
-                "block";
-
-        }else{
-
-            card.style.display =
-                "none";
-
-        }
-
-    });
-
-}
-
-
-/* ================================
-   CHECKOUT WHATSAPP
-================================ */
-
+/* CHECKOUT WHATSAPP */
 function checkout(){
 
     if(cart.length === 0){
 
         alert(
-            "Keranjang masih kosong!"
+            "Keranjang masih kosong. Silakan pilih menu terlebih dahulu!"
         );
 
         return;
-
     }
 
 
     /*
-    =====================================
-    GANTI NOMOR WHATSAPP DI SINI
-    =====================================
+    =================================
+    GANTI NOMOR WA DI BAWAH INI
+    =================================
 
-    Contoh nomor:
+    Contoh:
     081234567890
 
     Ditulis:
     6281234567890
 
-    JANGAN memakai:
-    +62
-    08
-    spasi
-    tanda -
+    Jangan pakai +62
     */
 
     const phone =
@@ -1369,9 +1107,8 @@ function checkout(){
 
     cart.forEach(item=>{
 
-        const subtotal =
+        let subtotal =
             item.price * item.qty;
-
 
         total += subtotal;
 
@@ -1394,14 +1131,8 @@ function checkout(){
 
 
     message +=
-        "\n\nMohon konfirmasi pesanan saya.";
+        "\n\nMohon konfirmasi pesanan saya. Terima kasih!";
 
-
-    /*
-    =====================================
-    MEMBUAT LINK WHATSAPP
-    =====================================
-    */
 
     const whatsappURL =
         "https://wa.me/" +
@@ -1409,12 +1140,6 @@ function checkout(){
         "?text=" +
         encodeURIComponent(message);
 
-
-    /*
-    =====================================
-    BUKA WHATSAPP
-    =====================================
-    */
 
     window.open(
         whatsappURL,
@@ -1424,11 +1149,10 @@ function checkout(){
 }
 
 
-/* Jalankan saat website dibuka */
-
+/* JALANKAN */
 updateCart();
 
 </script>
 
 </body>
-  </html>
+    </html>
